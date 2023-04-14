@@ -1,0 +1,62 @@
+.header, .nav, .main, .sidebar, .add, .footer{
+    background-color: aqua;
+}
+.container{
+    display: grid;
+    gap: 10px;
+    height: 600px;
+    grid-template-columns: repeat(12, 1fr);
+ 
+    grid-template-areas: 
+    "h h h h h h h h h h h h"
+    "n n n m m m m m m s s s"
+    "n n n m m m m m m a a a"
+    "f f f f f f f f f f f f";
+}
+@media screen and (max-width: 576px) {
+    .container{
+        grid-template-areas: 
+        "h h h h h h h h h h h h"
+        "n n n n n n n n n n n n"
+        "n n n n n n n n n n n n"
+        "m m m m m m m m m m m m"
+        "m m m m m m m m m m m m"
+        "m m m m m m m m m m m m"
+        "s s s s s s s s s s s s"
+        "a a a a a a a a a a a a"
+        "f f f f f f f f f f f f";
+    }
+}
+@media screen and (min-width: 577px) and (max-width: 992px) {
+    .container{
+        grid-template-areas: 
+        "h h h h h h h h h h h h"
+        "n n n n n n n n n n n n"
+        "s s s s s m m m m m m m"
+        "s s s s s m m m m m m m"
+        "a a a a a f f f f f f f";
+    }
+}
+
+
+
+
+
+.header{
+    grid-area: h;
+}
+.nav{
+    grid-area: n;
+}
+.main{
+    grid-area: m;
+}
+.sidebar{
+    grid-area: s;
+}
+.add{
+    grid-area: a;
+}
+.footer{
+    grid-area: f;
+}

@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            background-color :whitesmoke;
+        }
+        
+       
+
+        /* .mbox{
+            width: 150px;
+            height: 150px;
+            border: 3px solid red;
+            background-color: yellow;
+        }
+
+        .cbox{
+            width: 150px;
+            height: 150px;
+            border: 3px solid red;
+            background-color: blue;
+            transform: scale(0.5);
+        }
+        .cbox:hover{
+            transform: rotate(-45deg);
+            transform-origin: top right;
+        } */
+        .box{
+            border: 1px  dotted;
+            position: relative;
+        }
+        .bat{
+            transition: transform 0.2s ease-in ;
+        }
+        .ball{
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            background-color: red;
+            position: absolute;
+            left: 495px;
+            top: 150px;
+            transition: transform 0.2s ease-out 0.2s ;
+
+        }
+        .box:hover .ball{
+            transform: translate(1200px , 600px);
+            transition-property: width;
+            transition;
+            
+        }
+        .box:hover .bat{
+            transform: rotate(30deg);
+            transform-origin: top right;
+            transition: transform 0.2s ease-out;
+        }
+    </style>
+</head>
+<body>
+     <div class="box">
+         <img class="bat" src="bat.webp" alt="">
+         <div class="ball"></div>
+     </div>   
+
+     
+     
+</body>
+</html>
